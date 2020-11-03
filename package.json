@@ -1,0 +1,25 @@
+{
+  "name": "sheet_serach",
+  "version": "1.0.0",
+  "description": "serach path all excel sheetname",
+  "main": "app.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "node-xlsx": "^0.15.0",
+    "xlsx": "^0.16.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/robinch-top/excel_sheet_serach.git"
+  },
+  "author": "robinch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinch-top/excel_sheet_serach/issues"
+  },
+  "homepage": "https://github.com/robinch-top/excel_sheet_serach#readme"
+}
