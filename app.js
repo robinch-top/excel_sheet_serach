@@ -9,8 +9,8 @@ start()
  */
 async function start() {
     //等待输入
-    var filePath = readlineSync.question('输入查找路径:');
-    var Str = readlineSync.question('输入查找关键词:');
+    var filePath = readlineSync.question("输入查找路径:");
+    var Str = readlineSync.question("输入查找关键词:");
     //大写
     let findStr = Str.toUpperCase()
     let list = await findDirectory(filePath, findStr)
@@ -43,9 +43,12 @@ async function findDirectory(filePath, findStr) {
             var filedir = path.join(filePath, item);
             let stat = await fileIsFile(filedir)
             if (stat.isFile()) {
-                let data = await findFile(filedir, findStr)
-                if (data.length) {
-                    findlist = findlist.concat(data)
+                let Suffix=filedir.split('.')[1]
+                if(Suffix==='xlsx'||Suffix==='xls'){
+                    let data = await findFile(filedir, findStr)
+                    if (data.length) {
+                        findlist = findlist.concat(data)
+                    }
                 }
             } else if (stat.isDirectory()) {
                 let data = await findDirectory(filedir)
